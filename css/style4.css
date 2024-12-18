@@ -1,0 +1,252 @@
+/* Om Radar */
+
+header {
+    background-color: #ffffff;
+    padding: 30px;
+    height: 93px;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.logo-container {
+    position: relative;
+    top: -29px;
+    text-align: center;
+}
+
+.logo-container img {
+    width: 175px;
+    height: auto;
+}
+
+/* Søgeikon styling */
+.søgeikon {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    width: 100px;
+}
+
+.søgeikon img {
+    width: 100%;
+    height: auto;
+}
+
+.burger {
+    position: absolute;
+    top: 60px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: -70px;
+    color: #000000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 80px;
+    border: 10px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 5;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease;
+    border-radius: 30px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.burger i:hover ul {
+    opacity: 1;
+    transform: all 1s ease;
+}
+
+.dropdown ul li {
+    padding: 10px 110px;
+}
+
+.dropdown ul li a {
+    font-family: "Cinzel", serif;
+    color: #e1ff00;
+    text-decoration: none;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.burger:hover .dropdown {
+    display: flex;
+}
+
+.dropdown li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+}
+
+.h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+  
+/* Container til tekst og billede */
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Justerer indholdet øverst */
+    gap: 30px; /* Mellemrum mellem tekst og billede */
+    margin: 40px auto;
+    max-width: 1200px; /* Begræns bredden */
+    padding: 0 20px;
+  }
+  
+  /* Tekstsektion */
+  .text-content {
+    flex: 1; /* Gør teksten fleksibel og fyldende */
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  /* Billedsektion */
+  .image-content img {
+    width: 100%; /* Billedet fylder sin container */
+    max-width: 400px; /* Begrænser billedets bredde */
+    height: auto;
+    border-radius: 5px; /* Afrundede hjørner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Let skygge */
+}
+
+.text2{
+    font-size: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.image{
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px; 
+    font-family: Arial, sans-serif;
+}
+  
+  
+.footer-info {
+    text-align: left;
+    font-size: 20px; 
+    line-height: 1.5; 
+}
+  
+ 
+.footer-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .text-content {
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 13px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    .overlay-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 50px;
+    }
+    .text2{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        display: block; 
+        text-align: center; 
+        margin: 0 auto;
+      }
+      
+      .image-content {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto; 
+        border-radius: 10px; 
+      }
+      
+      .text-content {
+        margin: 20px auto; 
+        max-width: 600px; 
+        font-family: serif;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #000; 
+        text-align: left; 
+      }
+      .text2 {
+        margin: 20px auto; 
+        max-width: 600px; 
+        font-family: serif; 
+        font-size: 18px;
+        line-height: 1.5;
+        color: #000; 
+        text-align: left; 
+      }
+}
